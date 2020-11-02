@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Lato&family=Overlock+SC&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text&family=Merienda&family=Montserrat&display=swap');
+
+html, body {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+/* Scrollbar Customs */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(233, 233, 233);
+}
+/* Navbar */
+.navbar .navbar-nav{
+  color: #62626b;
+  font-size: 1.3em;
+  padding: 20px;
+}
+.nav-link {
+  margin-right: 50px;
+  font-weight: 500;
+}
+#main, #about, #portfolio, #contact, #cv {
+  height: 100vh;
+}
+/* Main Area */
+#main .black {
+  content: '';
+  background-color: rgb(40, 40, 40);
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 5em;
+  left: 12em;
+  z-index: -1;
+}
+#main .white {
+  content: '';
+  background-color: rgb(246, 249, 250);
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 10em;
+  left: 20em;
+  z-index: -1;
+}
+.white::after {
+  content: '';
+  width: 400px;
+  height: 5px;
+  position: absolute;
+  box-shadow: -120px 380px 40px 20px rgb(235, 232, 232);
+  opacity: .5;
+  border-radius: 80%;
+  z-index: -1;
+}
+#main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main h1 {
+  font-family: 'Overlock SC', cursive;
+  position: absolute;
+  top: 18rem;
+  left: 34.5%;
+  font-size: 6rem;
+  z-index: 1;
+}
+#main h3 {
+  font-family: 'Lato', sans-serif;
+  position: absolute;
+  left: 43%;
+  top: 25rem;
+  z-index: 1;
+}
+.line {
+  content: '';
+  width: 5px;
+  height: 7.5rem;
+  position: absolute;
+  right: 25%;
+  top: 20em;
+  background-color: black;
+}
+/* About Area */
+#about {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#about::before {
+  content: '';
+  width: 15em;
+  height: 30em;
+  background-color: lightslategrey;
+  position: absolute;
+  left: 15%;
+  top: 5em;
+}
+#about::after {
+  content: '';
+  background-image: url(../img/circle.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 10%;
+  top: 3em;
+}
+#about img {
+  margin: 10em 0 0 10em;
+  width: 20em;
+}
+#about h2 {
+  font-size: 2.5rem;
+  padding-top: 3em;
+}
+#about p {
+  font-family: 'Roboto', sans-serif;
+  text-align: justify;
+  font-size: 1.2rem;
+}
+/* Portfolio Area */
+#portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  position: relative;
+}
+#portfolio::before {
+  content: 'Portfolio';
+  font-size: 5em;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 4em;
+  left: -9%;
+  letter-spacing: 10px;
+}
+#portfolio::after {
+  content: 'Portfolio';
+  font-size: 5em;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 4.1em;
+  left: -10%;
+  letter-spacing: 10px;
+}
+#portfolio .card-columns{
+  padding: 7em 10em;
+  margin-right: 30em;
+  width: 60em;
+}
+/* Icons */
+.icons {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 11em;
+  right: 50px;
+  font-size: 1.8em;
+}
+.icons i {
+  margin-bottom: 20px;
+}
+.icons i:hover {
+  color: rgb(150, 156, 154);
+}
+/* Category */
+.category {
+  display: flex;
+  flex-wrap: wrap;
+  width: 350px;
+  color: rgb(192, 192, 192);
+  position: absolute;
+  right: 10em;
+  bottom: 20em;
+}
+.category li {
+  padding: 0 10px 0 0;
+  margin: 0 10px 10px 20px;
+  font-size: 1.2em;
+  list-style: none;
+}
+.category .cat-1 {
+  margin-left: -5px;
+}
+/* Download CV */
+#cv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.text {
+  width: 600px;
+  height: 300px;
+  position: relative;
+}
+#cv h2, #cv p, #cv a {
+  position: absolute;
+}
+#cv h2:first-child, #cv h2:nth-child(2) {
+  color: rgb(173, 173, 173);
+  font-family: 'Montserrat', sans-serif;
+}
+#cv h2:first-child {
+  top: 1.5em;
+  font-size: 5rem;
+  transform: rotate(-90deg);
+}
+#cv h2:nth-child(2) {
+  top: 1.2em;
+  left: 3.2em;
+  font-size: 3rem;
+  color: rgb(11, 57, 65);
+}
+#cv h2:nth-child(3) {
+  color: lightslategray;
+  top: 0.7em;
+  left: 1.1em;
+  font-size: 8rem;
+  font-family: 'Merienda', cursive;
+}
+#cv h2:nth-child(4) {
+  font-size: 3em;
+  top: 4.5em;
+  right: 3em;
+  font-weight: 400;
+  color: rgb(11, 57, 65);
+  font-family: 'Bellota Text', cursive;
+}
+#cv p {
+  top: 10em;
+  /* bottom: 5em; */
+}
+#cv a {
+  color: white;
+  background-color: rgb(174, 184, 194);
+  padding: 20px;
+  border-radius: 30px;
+  bottom: -5em;
+  left: 15em;
+  text-decoration: none;
+  font-weight: 500;
+}
+#cv a:hover {
+  font-weight: 700;
+  color: lightslategray;
+  background-color: white;
+  border:1px solid lightslategray;
+}
+.circle {
+  background-color: white;
+  border-radius: 50%;
+}
+/* Socmed Area */
+#contact {
+  display: flex;
+  justify-content: center;
+}
+#contact .socmed {
+  display: flex;
+  width: 80vw;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 5em;
+  position: relative;
+  /* border: 1px solid black; */
+}
+#contact h2 {
+  position: absolute;
+  left: 6.5em;
+  text-align: center;
+  top: 1em;
+  margin: 3em ;
+  font-size: 0.7em;
+  font-family: 'Caveat Brush', cursive;
+}
+.socmed a {
+  margin-top: 2em;
+  text-decoration: none;
+  height: 1.8em;
+  position: relative;
+}
+.socmed i {
+  color: #62626b;
+  display: inline-block;
+}
+.socmed i:hover {
+  color: #222;
+  text-shadow: 2px 2px 5px rgb(172, 170, 170);
+}
+.socmed span {
+  position: absolute;
+  bottom: 0;
+  font-size: 1rem;
+  color: black;
+  font-weight: 500;
+}
+/* Footer */
+footer {
+  background-color: black;
+  height: 5rem;
+  text-align: center;
+  color: white;
+  line-height: 4rem;
+  margin-bottom: -100px;
+}
+/* Web Responsive */
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+   #main h1 {
+     font-size: 40px;
+     left: 30%;
+     top: 6em;
+   }
+
+   #main .black {
+     top: 8em;
+     left: 5em;
+     width: 200px;
+     height: 200px;
+    }
+    
+    #main .white {
+      width: 200px;
+      height: 200px;
+     left: 8em;
+     top: 12em;
+   }
+   .white::after {
+     width: 200px;
+     height: 1px;
+     box-shadow: -10px 20em 40px 20px rgb(235, 232, 232);
+   }
+
+   #main h3 {
+     top: 20em;
+     font-size: 1em;
+   }
+
+   .line {
+     display: none;
+   }
+
+   #about img {
+     width: 150px;
+     margin: 25em 12em 0 12em ;
+   }
+
+   #about::before {
+     top: 3em;
+     left: 10%;
+     width: 20rem;
+     height: 8em;
+   }
+
+   #about::after {
+     top: 8em;
+     left: 0;
+     transform: scale(0.9);
+   }
+   .about {
+     width: 400px;
+     margin: -5em 0 0 20px;
+    }
+
+   #portfolio .card-columns {
+     position: absolute;
+     width: 30em;
+     right: 0;
+     margin: 35em 0;
+     padding: 1em 1em;
+   }
+
+   #portfolio::before {
+     left: 4.9em;
+     top: 16em;
+     font-size: 1.5rem;
+     transform: rotate(0);
+   }
+   #portfolio::after {
+     left: 5em;
+     top: 16.2em;
+     font-size: 1.5rem;
+     transform: rotate(0);
+   }
+   .icons {
+     font-size: 2rem;
+     flex-direction: row;
+     width: 100px;
+    top: 18em;
+    right: 8em;
+    font-size: 1.5em;
+    justify-content: space-between;
+   }
+   .icons i {
+     margin-bottom: 0;
+   }
+   .category {
+     top: 30em;
+     left: 2.5em;
+    }
+    .category li {
+      font-size: 1rem;
+
+   }
+   .category .cat-1 {
+     margin-left: 5px;
+   }
+   #cv {
+     border: 1px solid black;
+     bottom: 1em;
+
+   }
+   .text {
+     width: 400px;
+     /* position: unset; */
+     /* border: 1px solid grey; */
+   }
+}
+
+/* Medium devices (tablets, 750px and up) */
+@media (max-width: 800px) {
+  #main h1 {
+    font-size: 20px;
+    left: 30%;
+    top: 6em;
+  }
+
+  #main .black {
+    top: 8em;
+    left: 5em;
+    width: 200px;
+    height: 200px;
+  }
+
+  #main .white {
+    width: 200px;
+    height: 200px;
+    left: 8em;
+    top: 12em;
+  }
+
+  .white::after {
+    width: 200px;
+    height: 1px;
+    box-shadow: -10px 20em 40px 20px rgb(235, 232, 232);
+  }
+
+  #main h3 {
+    top: 20em;
+    font-size: 1em;
+  }
+
+  .line {
+    display: none;
+  }
+
+  #about img {
+    width: 150px;
+    margin: 25em 12em 0 12em;
+  }
+
+  #about::before {
+    top: 3em;
+    left: 10%;
+    width: 20rem;
+    height: 8em;
+  }
+
+  #about::after {
+    top: 8em;
+    left: 0;
+    transform: scale(0.9);
+  }
+
+  .about {
+    width: 400px;
+    margin: -5em 0 0 20px;
+  }
+
+  #portfolio .card-columns {
+    position: absolute;
+    width: 30em;
+    right: 0;
+    margin: 35em 0;
+    padding: 1em 1em;
+  }
+
+  #portfolio::before {
+    left: 4.9em;
+    top: 16em;
+    font-size: 1.5rem;
+    transform: rotate(0);
+  }
+
+  #portfolio::after {
+    left: 5em;
+    top: 16.2em;
+    font-size: 1.5rem;
+    transform: rotate(0);
+  }
+
+  .icons {
+    font-size: 2rem;
+    flex-direction: row;
+    width: 100px;
+    top: 18em;
+    right: 8em;
+    font-size: 1.5em;
+    justify-content: space-between;
+  }
+
+  .icons i {
+    margin-bottom: 0;
+  }
+
+  .category {
+    top: 30em;
+    left: 2.5em;
+  }
+
+  .category li {
+    font-size: 1rem;
+
+  }
+
+  .category .cat-1 {
+    margin-left: 5px;
+  }
+
+  #cv {
+    border: 1px solid black;
+    bottom: 1em;
+
+  }
+
+  .text {
+    width: 400px;
+    /* position: unset; */
+    /* border: 1px solid grey; */
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) {
+  
+}*/
+
+/* Extra large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) {
+  
+}*/
