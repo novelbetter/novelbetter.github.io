@@ -8,7 +8,7 @@ html, body {
   overflow-x: hidden;
 }
 /* Scrollbar Customs */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
@@ -16,7 +16,7 @@ html, body {
 }
 ::-webkit-scrollbar-thumb {
   background: rgb(233, 233, 233);
-}
+} */
 /* Navbar */
 .navbar .navbar-nav{
   color: #62626b;
@@ -31,68 +31,39 @@ html, body {
   height: 100vh;
 }
 /* Main Area */
-#main .black {
-  content: '';
-  background-color: rgb(40, 40, 40);
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  top: 5em;
-  left: 12em;
-  z-index: -1;
-}
-#main .white {
-  content: '';
-  background-color: rgb(246, 249, 250);
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  top: 10em;
-  left: 20em;
-  z-index: -1;
-}
-.white::after {
-  content: '';
-  width: 400px;
-  height: 5px;
-  position: absolute;
-  box-shadow: -120px 380px 40px 20px rgb(235, 232, 232);
-  opacity: .5;
-  border-radius: 80%;
-  z-index: -1;
-}
+
 #main {
   position: relative;
+  background-image: url(../img/coding-setup.jpg);
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-#main h1 {
+#main h1, #main h3 {
   font-family: 'Overlock SC', cursive;
-  position: absolute;
-  top: 18rem;
-  left: 34.5%;
-  font-size: 6rem;
+  color: white;
+  /* position: relative; */
   z-index: 1;
+  font-size: 50px;
 }
-#main h3 {
-  font-family: 'Lato', sans-serif;
-  position: absolute;
-  left: 43%;
-  top: 25rem;
-  z-index: 1;
-}
-.line {
+#main::after {
   content: '';
-  width: 5px;
-  height: 7.5rem;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
   position: absolute;
-  right: 25%;
-  top: 20em;
-  background-color: black;
+  background: rgba(0, 0, 0,.3);
 }
+
+
 /* About Area */
 #about {
+  font-family: 'Lato', sans-serif;
   display: flex;
   align-items: center;
   position: relative;
@@ -103,8 +74,8 @@ html, body {
   height: 30em;
   background-color: lightslategrey;
   position: absolute;
-  left: 15%;
-  top: 5em;
+  left: 10%;
+  top: 28%;
 }
 #about::after {
   content: '';
@@ -113,12 +84,13 @@ html, body {
   position: absolute;
   width: 200px;
   height: 200px;
-  left: 10%;
-  top: 3em;
+  left: 5%;
+  top: 24%;
 }
 #about img {
-  margin: 10em 0 0 10em;
+  margin: 10em 0 0 3em;
   width: 20em;
+  position: absolute;
 }
 #about h2 {
   font-size: 2.5rem;
@@ -134,7 +106,9 @@ html, body {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  align-items: center;
   position: relative;
+  /* border: 1px solid black; */
 }
 #portfolio::before {
   content: 'Portfolio';
@@ -143,8 +117,8 @@ html, body {
   font-family: Arial, Helvetica, sans-serif;
   transform: rotate(-90deg);
   position: absolute;
-  top: 4em;
-  left: -9%;
+  top: 5em;
+  left: -2.1em;
   letter-spacing: 10px;
 }
 #portfolio::after {
@@ -154,21 +128,25 @@ html, body {
   font-family: Arial, Helvetica, sans-serif;
   transform: rotate(-90deg);
   position: absolute;
-  top: 4.1em;
-  left: -10%;
+  top: 5.1em;
+  left: -2em;
   letter-spacing: 10px;
 }
 #portfolio .card-columns{
-  padding: 7em 10em;
-  margin-right: 30em;
-  width: 60em;
+  padding: 10px 5em;
+  /* margin: 10px 2em; */
+  top: 10em;
+  right: 2em;
+  width: 80%;
+  position: absolute;
+  /* border: 1PX SOLID rgb(99, 76, 76); */
 }
 /* Icons */
 .icons {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 11em;
+  top: 10em;
   right: 50px;
   font-size: 1.8em;
 }
@@ -180,13 +158,14 @@ html, body {
 }
 /* Category */
 .category {
+  /* border: 1px solid blue; */
   display: flex;
   flex-wrap: wrap;
-  width: 350px;
+  width: 80%;
   color: rgb(192, 192, 192);
   position: absolute;
-  right: 10em;
-  bottom: 20em;
+  /* right: 10em; */
+  bottom: 3em;
 }
 .category li {
   padding: 0 10px 0 0;
@@ -243,10 +222,9 @@ html, body {
   color: rgb(11, 57, 65);
   font-family: 'Bellota Text', cursive;
 }
-#cv p {
+/* #cv p {
   top: 10em;
-  /* bottom: 5em; */
-}
+} */
 #cv a {
   color: white;
   background-color: rgb(174, 184, 194);
@@ -272,18 +250,17 @@ html, body {
   display: flex;
   justify-content: center;
 }
-#contact .socmed {
+.socmed {
   display: flex;
   width: 80vw;
   justify-content: space-evenly;
   align-items: center;
   font-size: 5em;
   position: relative;
-  /* border: 1px solid black; */
 }
 #contact h2 {
   position: absolute;
-  left: 6.5em;
+  /* left: 3em; */
   text-align: center;
   top: 1em;
   margin: 3em ;
@@ -312,99 +289,73 @@ html, body {
   font-weight: 500;
 }
 /* Footer */
-footer {
+#footer {
   background-color: black;
   height: 5rem;
   text-align: center;
   color: white;
   line-height: 4rem;
-  margin-bottom: -100px;
+  /* bottom: 0; */
+  /* margin-bottom: -100px; */
 }
 /* Web Responsive */
 /* Small devices (landscape phones, 576px and up) */
-@media (max-width: 576px) {
-   #main h1 {
-     font-size: 40px;
-     left: 30%;
-     top: 6em;
+@media (max-width: 700px) {
+   #main h1, #main h3 {
+     font-size: 20px;
    }
-
-   #main .black {
-     top: 8em;
-     left: 5em;
-     width: 200px;
-     height: 200px;
-    }
-    
-    #main .white {
-      width: 200px;
-      height: 200px;
-     left: 8em;
-     top: 12em;
+   #about {
+     height: 150vh;
    }
-   .white::after {
-     width: 200px;
-     height: 1px;
-     box-shadow: -10px 20em 40px 20px rgb(235, 232, 232);
-   }
-
-   #main h3 {
-     top: 20em;
-     font-size: 1em;
-   }
-
-   .line {
-     display: none;
-   }
-
    #about img {
-     width: 150px;
-     margin: 25em 12em 0 12em ;
+     width: 200px;
+     margin: -25em 0 0 2em;
    }
-
    #about::before {
      top: 3em;
-     left: 10%;
+     left: 10px;
+     /* right: 0; */
      width: 20rem;
      height: 8em;
    }
-
    #about::after {
-     top: 8em;
-     left: 0;
-     transform: scale(0.9);
+     top: 20em;
+     left: 10em;
+     /* right: 0; */
+     /* border: 1px solid black; */
    }
    .about {
-     width: 400px;
-     margin: -5em 0 0 20px;
-    }
-
-   #portfolio .card-columns {
+     width: 100%;
      position: absolute;
-     width: 30em;
-     right: 0;
-     margin: 35em 0;
-     padding: 1em 1em;
+     margin: -8em 0 0 18px;
+    }
+    #portfolio {
+      height: 500vh;
+      /* border: 1px solid black; */
+    }
+    #portfolio .card-columns {
+     margin: 15em 1em;
+     padding: 1em;
    }
 
    #portfolio::before {
-     left: 4.9em;
-     top: 16em;
+     left: 20%;
+     top: 0;
      font-size: 1.5rem;
      transform: rotate(0);
    }
    #portfolio::after {
-     left: 5em;
-     top: 16.2em;
+     left: 21%;
+     top: 3px;
      font-size: 1.5rem;
      transform: rotate(0);
    }
    .icons {
-     font-size: 2rem;
-     flex-direction: row;
-     width: 100px;
-    top: 18em;
-    right: 8em;
+    font-size: 2rem;
+    flex-direction: row;
+    width: 100px;
+    top: 7em;
+    right: 35%;
     font-size: 1.5em;
     justify-content: space-between;
    }
@@ -412,30 +363,107 @@ footer {
      margin-bottom: 0;
    }
    .category {
-     top: 30em;
-     left: 2.5em;
+     /* border: 1px solid black; */
+     /* margin: 0 auto; */
+     /* position: absolute; */
+     top: 2.5em;
+     left: 5%;
+     font-size: 1rem;
+     /* display: flex; */
+     align-items: center;
+     justify-content: center;
+     width: 90%;
+     height: 100px;
+     padding-left: 15px;
     }
     .category li {
-      font-size: 1rem;
-
-   }
-   .category .cat-1 {
-     margin-left: 5px;
-   }
-   #cv {
-     border: 1px solid black;
-     bottom: 1em;
-
-   }
-   .text {
-     width: 400px;
-     /* position: unset; */
-     /* border: 1px solid grey; */
-   }
-}
+      margin: 0px 10px;
+      padding: 0;
+      
+    }
+    #cv {
+      height: 80vh;
+      /* bottom: 1em; */
+    }
+    #cv .text {
+      /* display: flex; */
+      /* align-items: center; */
+      width: 80%;
+      /* border: 1px solid black; */
+      padding: 0;
+    }
+    #cv h2:first-child, #cv h2:nth-child(2) {
+      font-size: 35px;
+      left: 10px;
+    }
+    #cv h2:nth-child(2) {
+      top: 20px;
+      left: 2em;
+    }
+    #cv h2:nth-child(3) {
+      font-size: 50px;
+      top: 1em;
+      left: 1.4em;
+    }
+    #cv h2:nth-child(4) {
+      font-size: 30px;
+      top: 3.2em;
+      right: 2em;
+    }
+    #cv a {
+      padding: 10px;
+      bottom: 7em;
+      left: 35%;
+    }
+    #contact {
+      height: 50vh;
+      width: 100%;
+      display: relative;
+    }
+    #contact .socmed {
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+      /* border: 1px solid blue; */
+      padding: 0;
+      position: none;
+      /* background: grey; */
+    }
+    .socmed a {
+      margin: 0 10px;
+      height: 120px;
+      position: none;
+      /* border: 1px solid red; */
+      /* position: absolute; */
+    }
+    .socmed span {
+      margin-left: -10px;
+    }
+    .socmed i {
+      font-size: 50px;
+      /* margin-top: 20px; */
+    }
+    #contact h2 {
+      font-size: 30px;
+      margin: -1em 0 0 0;
+      /* padding: 20px; */
+      top: 0;
+    }
+    #footer {
+      /* border: 1px solid red; */
+      background-color: black;
+      height: 5rem;
+      width: 100%;
+      text-align: center;
+      color: white;
+      line-height: 4rem;
+      /* position: relative; */
+      /* bottom: 0; */
+      /* margin-bottom: -100em; */
+    }
+  }
 
 /* Medium devices (tablets, 750px and up) */
-@media (max-width: 800px) {
+/*@media (max-width: 800px) {
   #main h1 {
     font-size: 20px;
     left: 30%;
@@ -551,7 +579,7 @@ footer {
   }
 
   .text {
-    width: 400px;
+    width: 400px; */
     /* position: unset; */
     /* border: 1px solid grey; */
   }
