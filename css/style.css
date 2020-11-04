@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Lato&family=Overlock+SC&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bellota+Text&family=Merienda&family=Montserrat&display=swap');
 
-html, body {
+html,
+body {
   font-size: 14px;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
+
 /* Scrollbar Customs */
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
@@ -16,25 +19,40 @@ html, body {
 }
 ::-webkit-scrollbar-thumb {
   background: rgb(233, 233, 233);
-} */
-/* Navbar */
-.navbar .navbar-nav{
-  color: #62626b;
-  font-size: 1.3em;
-  padding: 20px;
 }
+/* Navbar */
+.navbar .navbar-nav {
+  font-size: 1.3em;
+  padding: 20px 10px;
+}
+
 .nav-link {
-  margin-right: 50px;
+  margin-right: 20px;
   font-weight: 500;
 }
-#main, #about, #portfolio, #contact, #cv {
+
+.darkHeader {
+  background: whitesmoke;
+  opacity: 0.9;
+}
+
+.darkLink {
+  color: lightslategrey !important;
+}
+
+#main,
+#about,
+#portfolio,
+#contact,
+#cv {
   height: 100vh;
 }
+
 /* Main Area */
 
 #main {
   position: relative;
-  background-image: url(../img/coding-setup.jpg);
+  background-image: url(../img/novel-black.jpeg);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -42,12 +60,15 @@ html, body {
   align-items: center;
   flex-direction: column;
 }
-#main h1, #main h3 {
+
+#main h1,
+#main h3 {
   font-family: 'Overlock SC', cursive;
   color: white;
   z-index: 1;
   font-size: 50px;
 }
+
 #main::after {
   content: '';
   width: 100%;
@@ -56,7 +77,7 @@ html, body {
   left: 0;
   right: 0;
   position: absolute;
-  background: rgba(0, 0, 0,.3);
+  background: rgba(0, 0, 0, .3);
 }
 
 
@@ -67,6 +88,7 @@ html, body {
   align-items: center;
   position: relative;
 }
+
 #about::before {
   content: '';
   width: 15em;
@@ -74,8 +96,9 @@ html, body {
   background-color: lightslategrey;
   position: absolute;
   left: 10%;
-  top: 28%;
+  top: 10%;
 }
+
 #about::after {
   content: '';
   background-image: url(../img/circle.png);
@@ -84,22 +107,27 @@ html, body {
   width: 200px;
   height: 200px;
   left: 5%;
-  top: 24%;
+  top: 8%;
 }
+
 #about img {
-  margin: 10em 0 0 3em;
+  top: 12%;
+  left: 20%;
   width: 20em;
   position: absolute;
 }
+
 #about h2 {
   font-size: 2.5rem;
   padding-top: 3em;
 }
+
 #about p {
   font-family: 'Roboto', sans-serif;
   text-align: justify;
   font-size: 1.2rem;
 }
+
 /* Portfolio Area */
 #portfolio {
   display: flex;
@@ -108,6 +136,7 @@ html, body {
   align-items: center;
   position: relative;
 }
+
 #portfolio::before {
   content: 'Portfolio';
   font-size: 5em;
@@ -115,10 +144,11 @@ html, body {
   font-family: Arial, Helvetica, sans-serif;
   transform: rotate(-90deg);
   position: absolute;
-  top: 5em;
+  top: 4em;
   left: -2.1em;
   letter-spacing: 10px;
 }
+
 #portfolio::after {
   content: 'Portfolio';
   font-size: 5em;
@@ -126,50 +156,61 @@ html, body {
   font-family: Arial, Helvetica, sans-serif;
   transform: rotate(-90deg);
   position: absolute;
-  top: 5.1em;
+  top: 4.1em;
   left: -2em;
   letter-spacing: 10px;
 }
-#portfolio .card-columns{
-  padding: 10px 5em;
-  top: 10em;
-  right: 2em;
-  width: 80%;
+
+#portfolio .card-columns {
+  padding: 10px 2em;
+  top: 6em;
+  left: 20em;
+  width: 50%;
+  height: 80%;
   position: absolute;
 }
+
 /* Icons */
 .icons {
   display: flex;
   flex-direction: column;
   position: absolute;
   top: 10em;
-  right: 50px;
+  right: 3em;
   font-size: 1.8em;
 }
+
 .icons i {
   margin-bottom: 20px;
 }
+
 .icons i:hover {
   color: rgb(150, 156, 154);
 }
+
 /* Category */
 .category {
   display: flex;
   flex-wrap: wrap;
-  width: 80%;
+  /* width: 80%; */
   color: rgb(192, 192, 192);
   position: absolute;
-  bottom: 3em;
+  bottom: 1em;
+  left: 30%;
+  justify-content: center;
 }
+
 .category li {
   padding: 0 10px 0 0;
   margin: 0 10px 10px 20px;
   font-size: 1.2em;
   list-style: none;
 }
+
 .category .cat-1 {
   margin-left: -5px;
 }
+
 /* Download CV */
 #cv {
   display: flex;
@@ -178,29 +219,38 @@ html, body {
   align-items: center;
   position: relative;
 }
+
 .text {
   width: 600px;
   height: 300px;
   position: relative;
 }
-#cv h2, #cv p, #cv a {
+
+#cv h2,
+#cv p,
+#cv a {
   position: absolute;
 }
-#cv h2:first-child, #cv h2:nth-child(2) {
+
+#cv h2:first-child,
+#cv h2:nth-child(2) {
   color: rgb(173, 173, 173);
   font-family: 'Montserrat', sans-serif;
 }
+
 #cv h2:first-child {
   top: 1.5em;
   font-size: 5rem;
   transform: rotate(-90deg);
 }
+
 #cv h2:nth-child(2) {
   top: 1.2em;
   left: 3.2em;
   font-size: 3rem;
   color: rgb(11, 57, 65);
 }
+
 #cv h2:nth-child(3) {
   color: lightslategray;
   top: 0.7em;
@@ -208,6 +258,7 @@ html, body {
   font-size: 8rem;
   font-family: 'Merienda', cursive;
 }
+
 #cv h2:nth-child(4) {
   font-size: 3em;
   top: 4.5em;
@@ -216,9 +267,7 @@ html, body {
   color: rgb(11, 57, 65);
   font-family: 'Bellota Text', cursive;
 }
-/* #cv p {
-  top: 10em;
-} */
+
 #cv a {
   color: white;
   background-color: rgb(174, 184, 194);
@@ -229,21 +278,25 @@ html, body {
   text-decoration: none;
   font-weight: 500;
 }
+
 #cv a:hover {
   font-weight: 700;
   color: lightslategray;
   background-color: white;
-  border:1px solid lightslategray;
+  border: 1px solid lightslategray;
 }
+
 .circle {
   background-color: white;
   border-radius: 50%;
 }
+
 /* Socmed Area */
 #contact {
   display: flex;
   justify-content: center;
 }
+
 .socmed {
   display: flex;
   width: 80vw;
@@ -252,28 +305,33 @@ html, body {
   font-size: 5em;
   position: relative;
 }
+
 #contact h2 {
   position: absolute;
   text-align: center;
   top: 1em;
-  margin: 3em ;
+  margin: 3em;
   font-size: 0.7em;
   font-family: 'Caveat Brush', cursive;
 }
+
 .socmed a {
   margin-top: 2em;
   text-decoration: none;
   height: 1.8em;
   position: relative;
 }
+
 .socmed i {
   color: #62626b;
   display: inline-block;
 }
+
 .socmed i:hover {
   color: #222;
   text-shadow: 2px 2px 5px rgb(172, 170, 170);
 }
+
 .socmed span {
   position: absolute;
   bottom: 0;
@@ -281,6 +339,7 @@ html, body {
   color: black;
   font-weight: 500;
 }
+
 /* Footer */
 #footer {
   background-color: black;
@@ -289,225 +348,69 @@ html, body {
   color: white;
   line-height: 4rem;
 }
+
 /* Web Responsive */
 /* Small devices (landscape phones, 576px and up) */
-@media (max-width: 700px) {
-   #main h1, #main h3 {
-     font-size: 20px;
-   }
-   #about {
-     height: 150vh;
-   }
-   #about img {
-     width: 200px;
-     margin: -25em 0 0 2em;
-   }
-   #about::before {
-     top: 3em;
-     left: 10px;
-     width: 20rem;
-     height: 8em;
-   }
-   #about::after {
-     top: 20em;
-     left: 10em;
-   }
-   .about {
-     width: 100%;
-     position: absolute;
-     margin: -8em 0 0 18px;
-    }
-    #portfolio {
-      height: 500vh;
-    }
-    #portfolio .card-columns {
-     margin: 15em 1em;
-     padding: 1em;
-   }
+@media (max-width: 576px) {
 
-   #portfolio::before {
-     left: 20%;
-     top: 0;
-     font-size: 1.5rem;
-     transform: rotate(0);
-   }
-   #portfolio::after {
-     left: 21%;
-     top: 3px;
-     font-size: 1.5rem;
-     transform: rotate(0);
-   }
-   .icons {
-    font-size: 2rem;
-    flex-direction: row;
-    width: 100px;
-    top: 7em;
-    right: 35%;
-    font-size: 1.5em;
-    justify-content: space-between;
-   }
-   .icons i {
-     margin-bottom: 0;
-   }
-   .category {
-     top: 2.5em;
-     left: 5%;
-     font-size: 1rem;
-     align-items: center;
-     justify-content: center;
-     width: 90%;
-     height: 100px;
-     padding-left: 15px;
-    }
-    .category li {
-      margin: 0px 10px;
-      padding: 0;
-    }
-    #cv {
-      height: 80vh;
-    }
-    #cv .text {
-      width: 80%;
-      padding: 0;
-    }
-    #cv h2:first-child, #cv h2:nth-child(2) {
-      font-size: 35px;
-      left: 10px;
-    }
-    #cv h2:nth-child(2) {
-      top: 20px;
-      left: 2em;
-    }
-    #cv h2:nth-child(3) {
-      font-size: 50px;
-      top: 1em;
-      left: 1.4em;
-    }
-    #cv h2:nth-child(4) {
-      font-size: 30px;
-      top: 3.2em;
-      right: 2em;
-    }
-    #cv a {
-      padding: 10px;
-      bottom: 7em;
-      left: 35%;
-    }
-    #contact {
-      height: 50vh;
-      width: 100%;
-      display: relative;
-    }
-    #contact .socmed {
-      flex-wrap: wrap;
-      margin-bottom: 50px;
-      padding: 0;
-      position: none;
-    }
-    .socmed a {
-      margin: 0 10px;
-      height: 120px;
-      position: none;
-    }
-    .socmed span {
-      margin-left: -10px;
-    }
-    .socmed i {
-      font-size: 50px;
-    }
-    #contact h2 {
-      font-size: 30px;
-      margin: -1em 0 0 0;
-      top: 0;
-    }
-    #footer {
-      background-color: black;
-      height: 5rem;
-      width: 100%;
-      text-align: center;
-      color: white;
-      line-height: 4rem;
-    }
-  }
-
-/* Medium devices (tablets, 750px and up) */
-/*@media (max-width: 800px) {
-  #main h1 {
-    font-size: 20px;
-    left: 30%;
-    top: 6em;
-  }
-
-  #main .black {
-    top: 8em;
-    left: 5em;
-    width: 200px;
-    height: 200px;
-  }
-
-  #main .white {
-    width: 200px;
-    height: 200px;
-    left: 8em;
-    top: 12em;
-  }
-
-  .white::after {
-    width: 200px;
-    height: 1px;
-    box-shadow: -10px 20em 40px 20px rgb(235, 232, 232);
-  }
-
+  #main h1,
   #main h3 {
-    top: 20em;
-    font-size: 1em;
+    font-size: 20px;
   }
-
-  .line {
-    display: none;
+  
+  #about {
+    height: 180vh;
+    /* border: 1px solid blue; */
+  }
+  .about {
+    position: absolute;
+    bottom: 0;
   }
 
   #about img {
-    width: 150px;
-    margin: 25em 12em 0 12em;
+    position: absolute;
+    width: 200px;
+    top: -32em;
+    left: 5em;
   }
 
   #about::before {
     top: 3em;
-    left: 10%;
+    left: 10px;
     width: 20rem;
     height: 8em;
   }
 
   #about::after {
-    top: 8em;
-    left: 0;
-    transform: scale(0.9);
+    top: 20em;
+    left: 50%;
   }
 
   .about {
-    width: 400px;
-    margin: -5em 0 0 20px;
+    width: 100%;
+    position: absolute;
+    margin: -8em 0 0 18px;
+  }
+
+  #portfolio {
+    height: 480vh;
   }
 
   #portfolio .card-columns {
-    position: absolute;
-    width: 30em;
-    right: 0;
-    margin: 35em 0;
-    padding: 1em 1em;
+    width: 100%;
+    left: 0;
+    top: 7%;
   }
-
   #portfolio::before {
-    left: 4.9em;
-    top: 16em;
+    left: 20%;
+    top: 0;
     font-size: 1.5rem;
     transform: rotate(0);
   }
 
   #portfolio::after {
-    left: 5em;
-    top: 16.2em;
+    left: 21%;
+    top: 3px;
     font-size: 1.5rem;
     transform: rotate(0);
   }
@@ -516,8 +419,8 @@ html, body {
     font-size: 2rem;
     flex-direction: row;
     width: 100px;
-    top: 18em;
-    right: 8em;
+    top: 7em;
+    right: 35%;
     font-size: 1.5em;
     justify-content: space-between;
   }
@@ -527,36 +430,200 @@ html, body {
   }
 
   .category {
-    top: 30em;
-    left: 2.5em;
+    top: 2.5em;
+    left: 5%;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 100px;
+    padding-left: 15px;
+  }
+
+  .category li {
+    margin: 0px 10px;
+    padding: 0;
+  }
+
+  #cv .text {
+    width: 80%;
+    padding: 0;
+  }
+
+  #cv h2:first-child,
+  #cv h2:nth-child(2) {
+    font-size: 35px;
+    left: 10px;
+  }
+
+  #cv h2:nth-child(2) {
+    top: 20px;
+    left: 2em;
+  }
+
+  #cv h2:nth-child(3) {
+    font-size: 50px;
+    top: 1em;
+    left: 1.4em;
+  }
+
+  #cv h2:nth-child(4) {
+    font-size: 30px;
+    top: 3.2em;
+    right: 2em;
+  }
+
+  #cv a {
+    padding: 10px;
+    bottom: 7em;
+    left: 35%;
+  }
+
+  #contact {
+    height: 50vh;
+    width: 100%;
+    display: relative;
+  }
+
+  #contact .socmed {
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    padding: 0;
+    position: none;
+  }
+
+  .socmed a {
+    margin: 0 10px;
+    height: 120px;
+    position: none;
+  }
+  
+  .socmed i {
+    padding: 10px;
+    font-size: 50px;
+  }
+
+  #contact h2 {
+    font-size: 30px;
+    margin: -1em 0 0 0;
+    top: 0;
+  }
+
+  #footer {
+    background-color: black;
+    height: 5rem;
+    width: 100%;
+    text-align: center;
+    color: white;
+    line-height: 4rem;
+  }
+}
+
+/* Medium devices (tablets, 750px and up) */
+@media (min-width: 750px) {
+  #main h3 {
+    font-size: 20px;
+  }
+  #about {
+    margin-bottom: 60px;
+  }
+  #about img {
+    width: 200px;
+    top: 40%;
+    left: 25%;
+  }
+  #about p {
+    font-size: 14px;
+  }
+  #about::before {
+    top: 10%;
+    left: 10%;
+  }
+
+  #about::after {
+    left: 0;
+  }
+
+  #portfolio .card-columns {
+    left: 10em;
+    padding: 20px;
+  }
+  .category {
+    left: 10em;
+    bottom: 0;
   }
 
   .category li {
     font-size: 1rem;
-
+  }
+  #portfolio::before {
+    top: 40%;
   }
 
-  .category .cat-1 {
-    margin-left: 5px;
+  #portfolio::after {
+    top: 41%;
   }
-
-  #cv {
-    border: 1px solid black;
-    bottom: 1em;
-
-  }
-
-  .text {
-    width: 400px; 
-  }
-} */
+}
 
 /* Large devices (desktops, 992px and up) */
-/* @media (min-width: 992px) {
-  
-}*/
+@media (min-width: 992px) {
+  #about::before {
+    top: 20%;
+    left: 10%;
+  }
+
+  #about::after {
+    left: 0;
+    top: 18%;
+  }
+  #about img {
+    width: 250px; 
+  }
+  #about p {
+    font-size: 16px;
+  }
+  #portfolio .card-columns {
+    height: 90%;
+    left: 20%;
+    top: 15%;
+  }
+  .category {
+    left: 30%;
+    bottom: -20px;
+  }
+}
 
 /* Extra large devices (large desktops, 1200px and up) */
-/* @media (min-width: 1200px) {
-  
-}*/
+@media (min-width: 1200px) {
+  #main h1 {
+    transform: scale(2);
+  }
+  #main h3 {
+    transform: scale(1.8);
+    margin-top: 30px;
+  }
+  #about img {
+    top: 20%;
+    width: 300px;
+  }
+  #about::before {
+    transform: scale(1.1);
+  }
+  #about::after {
+    left: 5%;
+    transform: scale(1.3);
+  }
+  #about p {
+    font-size: 18px;
+  }
+ .category {
+   left: 35%;
+   transform: scale(1.3);
+ }
+ .socmed a {
+   transform: scale(1.3);
+ }
+ footer {
+   font-size: 1.3em;
+ }
+}
