@@ -1,3 +1,8 @@
+$('.carousel').carousel({
+    interval: 0
+});
+
+
 $(window).scroll(() => {
     let scroll = $(window).scrollTop();
     if (scroll >= 500) {

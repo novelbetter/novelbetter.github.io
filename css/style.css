@@ -8,622 +8,100 @@ body {
   padding: 0;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Scrollbar Customs */
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-track {
   background: #fff;
 }
+
 ::-webkit-scrollbar-thumb {
   background: rgb(233, 233, 233);
 }
-/* Navbar */
-.navbar .navbar-nav {
-  font-size: 1.3em;
-  padding: 20px 10px;
-}
 
-.nav-link {
-  margin-right: 20px;
-  font-weight: 500;
-}
 
-.darkHeader {
-  background: whitesmoke;
-  opacity: 0.9;
-}
-
-.darkLink {
-  color: lightslategrey !important;
-}
-
-#main,
-#about,
-#portfolio,
-#contact,
-#cv {
+header {
   height: 100vh;
-}
-
-/* Main Area */
-
-#main {
+  background: black;
   position: relative;
-  background-image: url(../img/novel-black.jpeg);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  z-index: -2;
 }
 
-#main h1,
-#main h3 {
-  font-family: 'Overlock SC', cursive;
+.main-picture {
+  width: 500px;
+  transform: rotateY(180deg) scale(1.5);
+  position: absolute;
+  top: -120px;
+  left: 0px;
+}
+.title, .next, nav {
   color: white;
-  z-index: 1;
+  position: absolute;
+}
+.title {
+  width: 500px;
+  right: 10%;
+  bottom: 20%;
+  text-align: right;
+}
+.title h1 {
   font-size: 50px;
 }
-
-#main::after {
-  content: '';
-  width: 100%;
+.title h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: -30px;
+}
+.title p {
+  margin-top: 50px;
+}
+.next {
+  right: 0px;
+  display: flex;
+  align-items: center;
   height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  position: absolute;
-  background: rgba(0, 0, 0, .3);
 }
 
-
-/* About Area */
-#about {
-  font-family: 'Lato', sans-serif;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-#about::before {
-  content: '';
-  width: 15em;
-  height: 30em;
-  background-color: lightslategrey;
-  position: absolute;
-  left: 10%;
-  top: 10%;
-}
-
-#about::after {
-  content: '';
-  background-image: url(../img/circle.png);
-  background-repeat: no-repeat;
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  left: 5%;
-  top: 8%;
-}
-
-#about img {
-  top: 12%;
-  left: 20%;
-  width: 20em;
-  position: absolute;
-}
-
-#about h2 {
-  font-size: 2.5rem;
-  padding-top: 3em;
-}
-
-#about p {
-  font-family: 'Roboto', sans-serif;
-  text-align: justify;
-  font-size: 1.2rem;
-}
-
-/* Portfolio Area */
-#portfolio {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: center;
-  position: relative;
-}
-
-#portfolio::before {
-  content: 'Portfolio';
-  font-size: 5em;
-  text-transform: uppercase;
-  font-family: Arial, Helvetica, sans-serif;
-  transform: rotate(-90deg);
-  position: absolute;
-  top: 4em;
-  left: -2.1em;
-  letter-spacing: 10px;
-}
-
-#portfolio::after {
-  content: 'Portfolio';
-  font-size: 5em;
-  text-transform: uppercase;
-  font-family: Arial, Helvetica, sans-serif;
-  transform: rotate(-90deg);
-  position: absolute;
-  top: 4.1em;
-  left: -2em;
-  letter-spacing: 10px;
-}
-
-#portfolio .card-columns {
-  padding: 10px 2em;
-  top: 6em;
-  left: 20em;
-  width: 50%;
-  height: 80%;
-  position: absolute;
-}
-
-/* Icons */
-.icons {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 10em;
-  right: 3em;
-  font-size: 1.8em;
-}
-
-.icons i {
-  margin-bottom: 20px;
-}
-
-.icons i:hover {
-  color: rgb(150, 156, 154);
-}
-
-/* Category */
-.category {
-  display: flex;
-  flex-wrap: wrap;
-  /* width: 80%; */
-  color: rgb(192, 192, 192);
-  position: absolute;
-  bottom: 1em;
-  left: 30%;
-  justify-content: center;
-}
-
-.category li {
-  padding: 0 10px 0 0;
-  margin: 0 10px 10px 20px;
-  font-size: 1.2em;
-  list-style: none;
-}
-
-.category .cat-1 {
-  margin-left: -5px;
-}
-
-/* Download CV */
-#cv {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.text {
-  width: 600px;
-  height: 300px;
-  position: relative;
-}
-
-#cv h2,
-#cv p,
-#cv a {
-  position: absolute;
-}
-
-#cv h2:first-child,
-#cv h2:nth-child(2) {
-  color: rgb(173, 173, 173);
-  font-family: 'Montserrat', sans-serif;
-}
-
-#cv h2:first-child {
-  top: 1.5em;
-  font-size: 5rem;
-  transform: rotate(-90deg);
-}
-
-#cv h2:nth-child(2) {
-  top: 1.2em;
-  left: 3.2em;
-  font-size: 3rem;
-  color: rgb(11, 57, 65);
-}
-
-#cv h2:nth-child(3) {
-  color: lightslategray;
-  top: 0.7em;
-  left: 1.1em;
-  font-size: 8rem;
-  font-family: 'Merienda', cursive;
-}
-
-#cv h2:nth-child(4) {
-  font-size: 3em;
-  top: 4.5em;
-  right: 3em;
-  font-weight: 400;
-  color: rgb(11, 57, 65);
-  font-family: 'Bellota Text', cursive;
-}
-
-#cv a {
-  color: white;
-  background-color: rgb(174, 184, 194);
-  padding: 20px;
-  border-radius: 30px;
-  bottom: -5em;
-  left: 15em;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-#cv a:hover {
-  font-weight: 700;
-  color: lightslategray;
-  background-color: white;
-  border: 1px solid lightslategray;
-}
-
-.circle {
-  background-color: white;
-  border-radius: 50%;
-}
-
-/* Socmed Area */
-#contact {
-  display: flex;
-  justify-content: center;
-}
-
-.socmed {
-  display: flex;
-  width: 80vw;
-  justify-content: space-evenly;
-  align-items: center;
-  font-size: 5em;
-  position: relative;
-}
-
-#contact h2 {
-  position: absolute;
-  text-align: center;
-  top: 1em;
-  margin: 3em;
-  font-size: 0.7em;
-  font-family: 'Caveat Brush', cursive;
-}
-
-.socmed a {
-  margin-top: 2em;
-  text-decoration: none;
-  height: 1.8em;
-  position: relative;
-}
-
-.socmed i {
-  color: #62626b;
-  display: inline-block;
-}
-
-.socmed i:hover {
-  color: #222;
-  text-shadow: 2px 2px 5px rgb(172, 170, 170);
-}
-
-.socmed span {
-  position: absolute;
-  bottom: 0;
-  font-size: 1rem;
+.next i {
   color: black;
-  font-weight: 500;
+  font-size: 32px;
+  padding: 20px;
 }
-
-/* Footer */
-#footer {
-  background-color: black;
-  height: 5rem;
-  text-align: center;
+.next img {
+  position: absolute;
+  right: -130px;
+  height: 100%;
+  z-index: -1;
+}
+/* .next:after {
+  content: '';
+  width: 50px;
+  height: 50px;
+  background: blue;
+  position: absolute;
+  right: 0px;
+} */
+nav {
+  right: 0;
+  width: 100%;
+}
+header ul {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10%;
+}
+li {
+  font-size: 18px;
+  list-style: none;
+  margin: 20px 30px;
+}
+a {
+  text-decoration: none;
   color: white;
-  line-height: 4rem;
-}
 
-/* Web Responsive */
-/* Small devices (landscape phones, 576px and up) */
-@media (max-width: 576px) {
-
-  #main h1,
-  #main h3 {
-    font-size: 20px;
-  }
-  
-  #about {
-    height: 180vh;
-    /* border: 1px solid blue; */
-  }
-  .about {
-    position: absolute;
-    bottom: 0;
-  }
-
-  #about img {
-    position: absolute;
-    width: 200px;
-    top: -32em;
-    left: 5em;
-  }
-
-  #about::before {
-    top: 3em;
-    left: 10px;
-    width: 20rem;
-    height: 8em;
-  }
-
-  #about::after {
-    top: 20em;
-    left: 50%;
-  }
-
-  .about {
-    width: 100%;
-    position: absolute;
-    margin: -8em 0 0 18px;
-  }
-
-  #portfolio {
-    height: 480vh;
-  }
-
-  #portfolio .card-columns {
-    width: 100%;
-    left: 0;
-    top: 7%;
-  }
-  #portfolio::before {
-    left: 20%;
-    top: 0;
-    font-size: 1.5rem;
-    transform: rotate(0);
-  }
-
-  #portfolio::after {
-    left: 21%;
-    top: 3px;
-    font-size: 1.5rem;
-    transform: rotate(0);
-  }
-
-  .icons {
-    font-size: 2rem;
-    flex-direction: row;
-    width: 100px;
-    top: 7em;
-    right: 35%;
-    font-size: 1.5em;
-    justify-content: space-between;
-  }
-
-  .icons i {
-    margin-bottom: 0;
-  }
-
-  .category {
-    top: 2.5em;
-    left: 5%;
-    font-size: 1rem;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    height: 100px;
-    padding-left: 15px;
-  }
-
-  .category li {
-    margin: 0px 10px;
-    padding: 0;
-  }
-
-  #cv .text {
-    width: 80%;
-    padding: 0;
-  }
-
-  #cv h2:first-child,
-  #cv h2:nth-child(2) {
-    font-size: 35px;
-    left: 10px;
-  }
-
-  #cv h2:nth-child(2) {
-    top: 20px;
-    left: 2em;
-  }
-
-  #cv h2:nth-child(3) {
-    font-size: 50px;
-    top: 1em;
-    left: 1.4em;
-  }
-
-  #cv h2:nth-child(4) {
-    font-size: 30px;
-    top: 3.2em;
-    right: 2em;
-  }
-
-  #cv a {
-    padding: 10px;
-    bottom: 7em;
-    left: 35%;
-  }
-
-  #contact {
-    height: 50vh;
-    width: 100%;
-    display: relative;
-  }
-
-  #contact .socmed {
-    flex-wrap: wrap;
-    margin-bottom: 50px;
-    padding: 0;
-    position: none;
-  }
-
-  .socmed a {
-    margin: 0 10px;
-    height: 120px;
-    position: none;
-  }
-  
-  .socmed i {
-    padding: 10px;
-    font-size: 50px;
-  }
-
-  #contact h2 {
-    font-size: 30px;
-    margin: -1em 0 0 0;
-    top: 0;
-  }
-
-  #footer {
-    background-color: black;
-    height: 5rem;
-    width: 100%;
-    text-align: center;
-    color: white;
-    line-height: 4rem;
-  }
-}
-
-/* Medium devices (tablets, 750px and up) */
-@media (min-width: 750px) {
-  #main h3 {
-    font-size: 20px;
-  }
-  #about {
-    margin-bottom: 60px;
-  }
-  #about img {
-    width: 200px;
-    top: 40%;
-    left: 25%;
-  }
-  #about p {
-    font-size: 14px;
-  }
-  #about::before {
-    top: 10%;
-    left: 10%;
-  }
-
-  #about::after {
-    left: 0;
-  }
-
-  #portfolio .card-columns {
-    left: 10em;
-    padding: 20px;
-  }
-  .category {
-    left: 10em;
-    bottom: 0;
-  }
-
-  .category li {
-    font-size: 1rem;
-  }
-  #portfolio::before {
-    top: 40%;
-  }
-
-  #portfolio::after {
-    top: 41%;
-  }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-  #about::before {
-    top: 20%;
-    left: 10%;
-  }
-
-  #about::after {
-    left: 0;
-    top: 18%;
-  }
-  #about img {
-    width: 250px; 
-  }
-  #about p {
-    font-size: 16px;
-  }
-  #portfolio .card-columns {
-    height: 90%;
-    left: 20%;
-    top: 15%;
-  }
-  .category {
-    left: 30%;
-    bottom: -20px;
-  }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-  #main h1 {
-    transform: scale(2);
-  }
-  #main h3 {
-    transform: scale(1.8);
-    margin-top: 30px;
-  }
-  #about img {
-    top: 20%;
-    width: 300px;
-  }
-  #about::before {
-    transform: scale(1.1);
-  }
-  #about::after {
-    left: 5%;
-    transform: scale(1.3);
-  }
-  #about p {
-    font-size: 18px;
-  }
- .category {
-   left: 35%;
-   transform: scale(1.3);
- }
- .socmed a {
-   transform: scale(1.3);
- }
- footer {
-   font-size: 1.3em;
- }
 }
