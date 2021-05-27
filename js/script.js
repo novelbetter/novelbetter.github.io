@@ -1,15 +1,11 @@
-$('.carousel').carousel({
-    interval: 0
-});
-
-
-$(window).scroll(() => {
+$(window).scroll(function() {
     let scroll = $(window).scrollTop();
-    if (scroll >= 500) {
-        $('.navbar .navbar-nav').addClass('darkHeader');
-        $('.nav-link').addClass('darkLink');
+    if (scroll >= 200) {
+        $(".navbar").css("background", "white");
+        $(".navbar").css("transition", "0.2s ease-out");
+        $(".navbar").addClass("shadow-sm");
     } else {
-        $('.navbar .navbar-nav').removeClass('darkHeader');
-        $('.nav-link').removeClass('darkLink');
+        $(".navbar").css("background", "transparent");
+        $(".navbar").removeClass("shadow-sm");
     }
 });

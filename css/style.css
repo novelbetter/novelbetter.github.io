@@ -1,107 +1,213 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Lato&family=Overlock+SC&family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bellota+Text&family=Merienda&family=Montserrat&display=swap');
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Raleway:wght@700&family=Roboto&display=swap');
 
 html,
 body {
-  font-size: 14px;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	scroll-behavior: smooth;
 }
 
-/* Scrollbar Customs */
-::-webkit-scrollbar {
-  width: 10px;
+:root {
+	/* Typography */
+	--main-title: 'Quicksand', sans-serif;
+	--second-title: 'Raleway', sans-serif;
+	--body-text: 'Roboto', sans-serif;
+
+	/* Colors */
+	--primary: #3E3E3E;
+	--secondary: #EDEDED;
+	--ternary: #F5F5F5;
 }
 
-::-webkit-scrollbar-track {
-  background: #fff;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgb(233, 233, 233);
-}
-
-
-header {
-  height: 100vh;
-  background: black;
-  position: relative;
-  z-index: -2;
-}
-
-.main-picture {
-  width: 500px;
-  transform: rotateY(180deg) scale(1.5);
-  position: absolute;
-  top: -120px;
-  left: 0px;
-}
-.title, .next, nav {
-  color: white;
-  position: absolute;
-}
-.title {
-  width: 500px;
-  right: 10%;
-  bottom: 20%;
-  text-align: right;
-}
-.title h1 {
-  font-size: 50px;
-}
-.title h2 {
-  font-size: 30px;
-  font-weight: 500;
-  margin-top: -30px;
-}
-.title p {
-  margin-top: 50px;
-}
-.next {
-  right: 0px;
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
-.next i {
-  color: black;
-  font-size: 32px;
-  padding: 20px;
-}
-.next img {
-  position: absolute;
-  right: -130px;
-  height: 100%;
-  z-index: -1;
-}
-/* .next:after {
-  content: '';
-  width: 50px;
-  height: 50px;
-  background: blue;
-  position: absolute;
-  right: 0px;
-} */
-nav {
-  right: 0;
-  width: 100%;
-}
-header ul {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 10%;
-}
-li {
-  font-size: 18px;
-  list-style: none;
-  margin: 20px 30px;
-}
 a {
-  text-decoration: none;
-  color: white;
+	color: var(--primary);
+	text-decoration: none;
+}
 
+.navbar-brand,
+.navbar-nav {
+	font-size: 1.25rem;
+	font-weight: 500;
+	color: var(--main-title);
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+	outline: none;
+	box-shadow: none;
+	border: none;
+}
+
+.nav-item {
+	margin: 0 10px;
+	font-size: 1.4rem;
+}
+
+.socmed {
+	background-color: var(--ternary);
+	box-shadow: 2px 2px 5px lightgray;
+	width: 50px;
+	height: 250px;
+	right: 3%;
+	top: 10em;
+	font-size: 1.5rem;
+}
+
+.col-5 h3 {
+	font-family: var(--second-title);
+	font-size: 2rem;
+}
+
+/* -------------- Main ----------------*/
+#hero.row {
+	margin: 7rem 0;
+}
+
+.main-group {
+	height: 350px;
+}
+
+.brand {
+	font-family: var(--main-title);
+}
+
+.brand h1,
+.hire-me {
+	color: white;
+	background-color: var(--primary);
+}
+
+.brand h1 {
+	font-weight: 700;
+	font-size: 3.5rem;
+}
+
+.brand h3 {
+	font-weight: 600;
+	font-size: 2.5rem;
+	font-family: var(--second-title);
+}
+
+.hero-img {
+	width: 50%;
+}
+
+p.desc {
+	width: 76%;
+	font-family: var(--body-text);
+}
+
+.cta-buttons {
+	font-family: var(--main-title);
+	font-size: 1.25rem;
+}
+
+.hire-me {
+	letter-spacing: 1.5px;
+	font-weight: 600;
+}
+
+.download {
+	font-weight: 500;
+}
+
+/* -------------- About ----------------*/
+#about.row {
+	margin: 15rem 0;
+}
+
+.col-5 h3::before {
+	content: '';
+	width: 40%;
+	height: 40px;
+	background-color: #3E3E3E;
+	position: absolute;
+	top: 37em;
+	left: 0;
+}
+
+p.about-desc {
+	font-family: var(--body-text);
+	opacity: 0.7;
+}
+
+/* -------------- Portfolio ----------------*/
+#portfolio.row {
+	margin: 8rem 0;
+}
+
+.porto {
+	margin-bottom: 5rem;
+}
+
+.details a {
+	font-size: 1.25rem;
+}
+
+/* -------------- Footer ----------------*/
+footer {
+	margin: 0 !important;
+	height: 35vh;
+	background: var(--ternary);
+}
+
+footer p {
+	font-size: 1.5rem;
+}
+
+.contacts {
+	font-size: 2.5rem;
+	width: 30%;
+}
+
+@media screen and (max-width: 768px) {
+	.hero-img {
+		width: 80%;
+	}
+
+	.brand h1 {
+		font-size: 2.5rem;
+	}
+
+	.brand h3 {
+		font-size: 1.5rem;
+	}
+
+	p.desc {
+		width: 100%;
+	}
+
+	.contacts {
+		width: 50%;
+	}
+}
+
+
+
+@media screen and (max-width: 576px) {
+	.hero-img {
+		width: 80%;
+	}
+
+	.brand h1 {
+		font-size: 2.5rem;
+	}
+
+	.brand h3 {
+		font-size: 1.5rem;
+	}
+
+	p.desc {
+		width: 100%;
+	}
+
+	.col-5 h3::before {
+		top: 40em;
+	}
+
+	.contacts {
+		width: 50%;
+	}
 }
