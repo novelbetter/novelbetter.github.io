@@ -1,11 +1,12 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Raleway:wght@700&family=Roboto&display=swap');
 html {
-	scroll-behavior: smooth;
+	scroll-behavior: [ auto | smooth ];
 
 html,
 body {
 	font-size: 12px;
+	scroll-behavior: smooth;
 }
 
 :root {
