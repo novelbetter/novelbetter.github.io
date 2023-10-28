@@ -13,7 +13,7 @@
 </head>
 <body>
 	<!-- Navbar -->
-	<nav class="navbar navbar-expand-lg navbar-light sticky-top py-4">
+	<nav id="main-navbar" class="navbar navbar-expand-lg navbar-light sticky-top py-4">
 	  <div class="container">
 	    <a class="navbar-brand text-uppercase" href="https://novelbetter.github.io">Novelia Arum</a>
 	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +22,7 @@
 	    <div class="collapse navbar-collapse" id="navbarNav">
 	      <ul class="navbar-nav ms-auto">
 	        <li class="nav-item">
-	          <a class="nav-link" href="https://novelbetter.github.io">Home</a>
+	          <a class="nav-link" href="#hero">Home</a>
 	        </li>
 	        <li class="nav-item">
 	          <a class="nav-link" href="#about">About</a>
@@ -31,7 +31,7 @@
 	          <a class="nav-link" href="#portfolio">Portfolio</a>
 	        </li>
 	        <li class="nav-item">
-	          <a class="nav-link" href="mailto:noveliaarum@gmail.com">Contact</a>
+	          <a class="nav-link" href="#contact">Contact</a>
 	        </li>
 	      </ul>
 	    </div>
@@ -58,21 +58,23 @@
 						<h1 class="text-uppercase pe-5 py-3 d-inline-flex">Novelia Arum</h1>
 						<h3 class="">UI/UX Designer</h3>
 					</div>
-					<p class="desc mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id vero accusantium dicta perspiciatis illo autem debitis quod sapiente ipsum officiis, adipisci quidem exercitationem, ut natus! Quibusdam alias, blanditiis fuga architecto. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, illo similique ipsa, totam et iste incidunt reprehenderit ratione minima molestias delectus amet. Itaque fuga consequatur nobis eligendi perspiciatis. Temporibus, a!</p>
+					<p class="desc mb-4">Seorang blogger yang beralih haluan jadi Graphic Designer, mau jadi programmer tapi logika dan perasaannya masih suka perang. Sampai akhirnya jatuh cinta dengan UI/UX Design. Pertama kali tertarik bikin web karena suka custom tema Wordpress waktu SMP. Sering adu mekanik di grup Telegram DesignJam Indonesia dan lagi asik kuliah sambil kerja di Universitas Pelita Bangsa. Still on progress n see u on top!</p>
 					<div class="cta-buttons">
-						<a href="" class="hire-me text-center px-5 py-3">Hire Me</a>
-						<a href="" class="download ms-3"><i class="fas fa-cloud-download-alt me-2"></i>Download CV</a>
+						<a href="mailto:noveliaarum@gmail.com" class="hire-me text-center px-5 py-3">Hire Me</a>
+						<a href="https://drive.google.com/file/d/1YjhqF65yu0tqKcLJDC_ZPRuEdErwBT_y/view?usp=share_link" class="download ms-3"><i class="fas fa-cloud-download-alt me-2"></i>Download CV</a>
 					</div>
 				</div>
 			</div>
 		</section>
-
+		<div data-bs-spy="scroll" data-bs-target="#main-navbar" data-bs-offset="0" class="scrollspy" tabindex="0">
 		<section id="about" class="row">
 			<div class="col-md-5 col-sm-4 col-12 offset-1">
 				<h3>About Me</h3>
 			</div>
 			<div class="col-md-6 col-12">
-				<p class="about-desc">Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Nobis assumenda, vel sapiente, minus facilis perferendis! Vel ullam sit expedita exercitationem perspiciatis, neque ipsam eligendi dolorum assumenda provident quaerat et voluptatum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed accusantium, illum maxime dolorum temporibus porro repudiandae doloremque saepe aut tempore vel asperiores. Adipisci inventore velit porro dolores perferendis eveniet eligendi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque nobis aperiam nam maiores magnam at assumenda ipsa sunt eveniet culpa natus perferendis dolorum voluptatem sit laborum, id hic fugit, quidem! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, eveniet commodi autem esse quaerat exercitationem accusamus, sint facilis iusto corrupti enim ex eligendi a? Ab qui aperiam voluptas non soluta. <a href="./about.html" class="fw-bold"> read more <i class="fas fa-long-arrow-alt-right ms-1"></i></a></p>
+				<p class="about-desc">Lahir di Bekasi, 8 Januari 2002 dengan nama Novelia Arum Puspita. Sedari kecil dekat dengan dunia literasi dan paling tertarik dengan apapun tentang teknologi. Harusnya fisika jadi salah satu cabang ilmu pengetahuan yang paling favorit karena sering banget tertarik tentang astronomi dan fisika kuantum. Selain suka belajar hal baru, anaknya juga aktif banget organisasi dari SD sampai sekarang. Isu paling menarik yang paling sering diangkat ketika terjun ke lapangan selain tentang lingkungan ya sosial, kepribadiannya introvert tapi bisa jadi extrovert kalo udah deket banget.
+
+				Awalnya belajar programming karena pengen jadi hacker, tapi juga seneng sama dunia desain, akhirnya banting setir buat mendalami lebih jauh dan mengawinkan literasi, programming dan desain. Semoga masih tetap bisa berkontribusi lebih banyak di bidang yang digeluti sekarang. <a href="#about" class="fw-bold"> read more <i class="fas fa-long-arrow-alt-right ms-1"></i></a></p>
 			</div>
 		</section>
 
@@ -84,24 +86,23 @@
 				<a href="" class="row ps-md-5"><img src="./img/Travel App.png" alt="Travel App"></a>
 
 				<div class="details px-5 py-3">
-					<a href="./travel-app.html" class=""><i class="fas fa-book me-2"></i> View Study Case</a>
+					<a href="./travelapp.html" class=""><i class="fas fa-book me-2"></i> View Study Case</a>
 				</div>
 			</div>
 			<div class="porto">
 				<a href="" class="row ps-md-5 "><img src="./img/Nusaresearch.png" alt=""></a>
 				
 				<div class="details px-5 py-3">
-					<a href="#" class=""><i class="fas fa-book me-2"></i> View Study Case</a>
+					<a href="./nusaresearch.html" class=""><i class="fas fa-book me-2"></i> View Study Case</a>
 				</div>
 			</div>
 
-				
-			</div>
+			
 		</section>
-
+		</div>
 	</main>
 
-	<footer class="p-5">
+	<footer id="contact" class="p-5">
 		<div class="col-md-5 col-12 offset-1 porto">
 			<h3>Keep in touch</h3>
 			<p>For business inquiry please contact <a href="mailto:noveliaarum@gmail.com" class="text-decoration-underline">noveliaarum@gmail.com</a></p>
